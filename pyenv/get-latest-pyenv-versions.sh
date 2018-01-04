@@ -20,6 +20,8 @@ fi
 installable_versions="$(pyenv install -l)"
 installed_versions="$(pyenv versions --bare)"
 
+global_versions=""
+
 for version in "2.7" "3.5" "3.6"; do
   echo "Checking ${version}"
   version="${version/./\\.}"
@@ -35,6 +37,13 @@ for version in "2.7" "3.5" "3.6"; do
     pyenv install "${latest_version}"
     pyenv migrate "${installed_version}" "${latest_version}"
     pyenv uninstall -f "${installed_version}"
+    global_versions="${global_versions} ${latest_version}"
+  else
+    echo "Already latest version: ${installed_version}"
   fi
   echo
 done
+(
+  set -x
+  pyenv global ${global_versions}
+)
