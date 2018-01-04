@@ -1,0 +1,76 @@
+*.py[co]
+
+# Packages
+*.egg
+*.egg-info
+.eggs/
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+reports
+.coverage
+.tox
+
+# Translations
+*.mo
+
+*.log
+*.sqlite
+/configuration.json
+configuration_env.json
+
+/data
+/build
+/dist
+virtualenv.tar.gz
+/deploy/configuration/local
+
+# Editors
+.project
+.pydevproject
+*~
+.*.swp
+.idea/
+venv/
+virtualenv/
+virtualenv-2.*/
+virtualenv-3.*/
+
+.ropeproject
+
+/*.sublime-project
+/*.sublime-workspace
+
+.DS_Store
+
+scripts/run_local_server.sh
+
+*-e
+
+/.ipynb_checkpoints/
+*.ipynb
+
+.cache/
+
+/node_modules/
+
+# Wercker stuff
+/_builds/
+/_cache/
+/_projects/
+/_steps/
+
+/.python-version
+/venv/
+.vscode/
