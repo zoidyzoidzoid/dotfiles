@@ -2,5 +2,6 @@
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
     ~/.git_commit_msg.txt: git/git_commit_msg.txt
+    ~/.vimrc.after: vim/vimrc.after
     #~/.zshrc: zsh/zshrc
     #~/.zsh: zsh
