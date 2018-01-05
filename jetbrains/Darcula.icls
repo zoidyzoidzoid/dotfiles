@@ -1,0 +1,13 @@
+<scheme name="Darcula" version="142" parent_scheme="Darcula">
+  <option name="FONT_SCALE" value="1.0" />
+  <metaInfo>
+    <property name="created">2018-01-05T10:28:12</property>
+    <property name="ide">Python</property>
+    <property name="ideVersion">2017.3.2.0.0</property>
+    <property name="modified">2018-01-05T10:28:17</property>
+    <property name="originalScheme">_@user_Darcula</property>
+  </metaInfo>
+  <option name="EDITOR_FONT_SIZE" value="12" />
+  <option name="EDITOR_FONT_NAME" value="Fira Code" />
+  <option name="EDITOR_LIGATURES" value="true" />
+</scheme>
