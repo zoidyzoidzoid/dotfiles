@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-./brew.sh
+brew bundle

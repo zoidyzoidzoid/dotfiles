@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-brew backup
+brew bundle dump --force

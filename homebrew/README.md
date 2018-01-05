@@ -3,14 +3,13 @@
 [brew](https://brew.sh/) is great, and backing it up is easy:
 
 ```
-brew backup
+brew bundle dump
 ```
 
 And restoring is as easy as running the generated `brew.sh`:
 
 ```
-./brew.sh
+brew bundle
 ```
 
-P.S. I'm not too sure what the `index` is for, maybe if you wanna pin
-versions or something.
+P.S. I originally used [`brew backup`](https://github.com/rstacruz/homebrew-backup) which is deprecated.
