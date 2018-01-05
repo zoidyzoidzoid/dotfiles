@@ -2,10 +2,10 @@
 
 ## Included Backups
 
+- [x] Git
 - [x] [Homebrew](/homebrew/)
 - [ ] PyCharm / Gogland
+- [x] Pyenv
 - [ ] VSCode / sourcegraph Insiders
 - [ ] Vim
-- [ ] Git
-- [x] Pyenv
 - [ ] Zsh
