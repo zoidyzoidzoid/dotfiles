@@ -6,5 +6,6 @@
 - [ ] PyCharm / Gogland
 - [ ] VSCode / sourcegraph Insiders
 - [ ] Vim
-- [ ] Pyenv
+- [ ] Git
+- [x] Pyenv
 - [ ] Zsh
