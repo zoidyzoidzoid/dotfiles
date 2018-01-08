@@ -1,0 +1,3 @@
+#compdef org
+
+_arguments "1: :($(ls ~/src/org))"

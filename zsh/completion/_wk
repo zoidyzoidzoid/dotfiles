@@ -1,0 +1,3 @@
+#compdef wk
+
+_arguments "1: :($(ls ~/src/work))"

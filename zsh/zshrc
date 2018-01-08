@@ -1,0 +1,76 @@
+# set -x
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "zoidbergwill/oh-my-zsh", \
+    use:'themes/zoidbergwill.zsh-theme', \
+    rename-to:'zoidbergwill.zsh-theme', \
+    as:theme
+#zplug "b4b4r07/enhancd", at:v1, use:"*.sh"
+zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "lib/termsupport", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/osx", from:oh-my-zsh
+zplug "plugins/gnu-utils", from:oh-my-zsh
+zplug "plugins/colorize", from:oh-my-zsh
+zplug "plugins/history", from:oh-my-zsh
+zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+CASE_SENSITIVE="true"
+
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_LS_COLORS="false"
+DISABLE_AUTO_TITLE="false"
+HIST_STAMPS="dd/mm/yyyy"
+
+HISTSIZE=1000000
+HISTFILE=~/.zsh_history
+SAVEHIST=1000000
+setopt inc_append_history share_history
+
+. ~/.zsh/docker.zsh
+. ~/.zsh/general.zsh
+. ~/.zsh/git.zsh
+. ~/.zsh/go.zsh
+. ~/.zsh/h.zsh
+. ~/.zsh/javascript.zsh
+. ~/.zsh/kubectl.zsh
+. ~/.zsh/osx.zsh
+. ~/.zsh/prompt.zsh
+. ~/.zsh/python.zsh
+. ~/.zsh/work.zsh
+
+zstyle ':completion:*' menu select=2
+
+export TERM="xterm-256color"
+
+fpath=(~/.zsh/completion /usr/local/share/zsh-completions $fpath)
+
+source "${HOME}/src/work/google-cloud-sdk/path.zsh.inc"
+export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:${HOME}/.composer/vendor/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export PATH="~/.gem/ruby/2.4.0/bin:/usr/local/opt/ccache/libexec:/usr/local/opt/php71/bin:$PATH:${HOME}/.conduit/bin"
+source "${HOME}/src/work/google-cloud-sdk/completion.zsh.inc"
+source <(kubectl completion zsh)
+#alias vim=nvim
+#
+function view_ssl_cert() {
+    echo | openssl s_client -showcerts -servername "$1" -connect "$1":443 2>/dev/null | openssl x509 -inform pem -noout -text
+}
+
+export PATH="$PATH:/Users/william/src/apps/istio-0.1.6/bin"
+
+if ! zplug check; then
+    printf "Found zplug updates. Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug load
+
+if zplug check b4b4r07/enhancd; then
+  export ENHANCD_FILTER=fzy
+fi
+
+set +x

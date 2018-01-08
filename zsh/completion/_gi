@@ -1,0 +1,3 @@
+#compdef gi
+
+_arguments "1: :($(ls ~/src/git))"

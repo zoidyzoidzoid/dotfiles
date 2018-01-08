@@ -1,0 +1,3 @@
+#compdef sk
+
+_arguments "1: :($(ls ~/src/work/superbalist-kubernetes/projects))"

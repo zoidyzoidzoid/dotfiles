@@ -1,0 +1,3 @@
+#compdef sup
+
+_arguments "1: :($(ls ~/src/superbalist))"
