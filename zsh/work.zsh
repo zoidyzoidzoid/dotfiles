@@ -1,15 +1,11 @@
 #!/usr/bin/env zsh
 
-function wk {
-    eval "cd ~/src/work/$1"
-}
-
 function sup {
     eval "cd ~/src/superbalist/$1"
 }
 
 function sk {
-    eval "cd ~/src/work/superbalist-kubernetes/projects/$1"
+    eval "cd ~/src/superbalist/superbalist-kubernetes/projects/$1"
 }
 
 function gcloud_filter_id {
