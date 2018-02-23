@@ -1,0 +1,20 @@
+{
+    "editor.fontSize": 12,
+    "editor.fontFamily": "Fira Code",
+    "editor.renderWhitespace": "boundary",
+    "vim.useSystemClipboard": true,
+    "window.zoomLevel": 0,
+    "go.useLanguageServer": true,
+    "search.exclude": {
+        "**/venv": true,
+        "**/virtualenv": true
+    },
+    "terminal.external.osxExec": "/Applications/iTerm.app",
+    "terminal.integrated.fontSize": 12,
+    "workbench.navBar.visible": false,
+    "workbench.contextBar.visible": false,
+    "eslint.nodePath": "${homePath}/.config/yarn/global/node_modules/",
+    "tslint.nodePath": "${homePath}/.config/yarn/global/node_modules/",
+    "extensions.ignoreRecommendations": false,
+    "editor.minimap.enabled": false
+}
