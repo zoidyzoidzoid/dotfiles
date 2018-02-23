@@ -1,0 +1,14 @@
+dbaeumer.jshint
+dbaeumer.vscode-eslint
+eg2.tslint
+esbenp.prettier-vscode
+lukehoban.Go
+magicstack.MagicPython
+mrmlnc.vscode-remark
+ms-python.python
+ms-vscode.Theme-MarkdownKit
+octref.vetur
+robinbentley.sass-indented
+sourcegraph.javascript-typescript
+tht13.python
+vscodevim.vim
