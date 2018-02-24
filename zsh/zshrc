@@ -49,8 +49,8 @@ export TERM="xterm-256color"
 
 fpath=(~/.zsh/completion /usr/local/share/zsh-completions $fpath)
 
-source "${HOME}/src/superbalist/google-cloud-sdk/path.zsh.inc"
-source "${HOME}/src/superbalist/google-cloud-sdk/completion.zsh.inc"
+# source "${HOME}/src/superbalist/google-cloud-sdk/path.zsh.inc"
+# source "${HOME}/src/superbalist/google-cloud-sdk/completion.zsh.inc"
 export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:${HOME}/.composer/vendor/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 export PATH="~/.gem/ruby/2.4.0/bin:/usr/local/opt/ccache/libexec:/usr/local/opt/php71/bin:$PATH:${HOME}/.conduit/bin"
 source <(kubectl completion zsh)

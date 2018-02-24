@@ -3,5 +3,6 @@
     ~/.gitignore: git/gitignore
     ~/.git_commit_msg.txt: git/git_commit_msg.txt
     ~/.vimrc.after: vim/vimrc.after
+    ~/.janus: vim/janus-plugins
     ~/.zshrc: zsh/zshrc
     ~/.zsh: zsh

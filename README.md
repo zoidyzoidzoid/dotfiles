@@ -1,14 +1,21 @@
 # dotfiles
 
+- Install [Brew](https://brew.sh/)
+  ```
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```
+- Install [iTerm2](https://www.iterm2.com/downloads.html)
+- Restore Brew
+
 ## Included Backups
 
 - [x] Git
 - [x] [Homebrew](/homebrew/)
 - [ ] PyCharm / Gogland
 - [x] Pyenv
-- [ ] VSCode / sourcegraph Insiders
-- [ ] Vim
-- [ ] Zsh
+- [x] VSCode / sourcegraph Insiders
+- [x] Vim
+- [x] Zsh
 
 ## Fonts
 
