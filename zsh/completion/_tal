@@ -1,3 +1,3 @@
-#compdef wk
+#compdef tal
 
 _arguments "1: :($(ls ~/workspace))"

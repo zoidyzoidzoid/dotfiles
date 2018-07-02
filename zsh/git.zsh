@@ -31,7 +31,7 @@ function git-clean-remote() {
 }
 
 function gi {
-    eval "cd ~/src/git/$1"
+    eval "cd ~/src/$1"
 }
 
 alias g=git
