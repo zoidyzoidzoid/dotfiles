@@ -6,6 +6,10 @@
   ```
 - Install [iTerm2](https://www.iterm2.com/downloads.html)
 - Restore Brew
+- Install [Vim Janus](https://github.com/carlhuda/janus)
+  ```
+  curl -L https://bit.ly/janus-bootstrap | bash
+  ```
 
 ## Included Backups
 
