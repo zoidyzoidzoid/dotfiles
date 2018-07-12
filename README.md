@@ -1,5 +1,13 @@
 # dotfiles
 
+## Cloing the repo
+
+```sh
+git clone --recurse-submodules -j8 git://github.com/zoidbergwill/dotfiles.git
+```
+
+## Quick Setup
+
 - Install [Brew](https://brew.sh/)
   ```
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
