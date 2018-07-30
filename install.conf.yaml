@@ -6,3 +6,5 @@
     ~/.janus: vim/janus-plugins
     ~/.zshrc: zsh/zshrc
     ~/.zsh: zsh
+    ~/.config/nvim: ~/.vim
+    ~/.config/nvim/init.vim: ~/.vimrc

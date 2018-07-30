@@ -1,5 +1,5 @@
 if [[ "$(uname -s)" == 'Darwin' ]]; then
-  alias vim="mvim -v"
+  alias vim="nvim"
 
   brew_update() {
     brew upgrade --cleanup && brew cleanup -s

@@ -18,6 +18,11 @@
   default = simple
 [color]
   ui = always
+[grep]
+  lineNumber = true
+  extendedRegexp = true
+  threads = 64
+  fallbackToNoIndex = true
 #[status]
 #  submoduleSummary = true
 [alias]
@@ -170,6 +175,7 @@
   wiki = !hub browse -- wiki
   settings = !hub browse -- settings
   sub-update = !git submodule update --remote --merge
+  exec = "!exec "
 [url "git@github.com:"]
   insteadOf = gh:
 [hub]
@@ -179,8 +185,6 @@
   oldHighlight = red bold 52
   newNormal = green bold
   newHighlight = green bold 22
-[merge]
-  ff = only
 [filter "lfs"]
   clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

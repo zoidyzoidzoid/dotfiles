@@ -25,10 +25,10 @@ alias as='ark --kubecontext staging'
 alias ap='ark --kubecontext production'
 
 function wk {
-    eval "cd ~/workspace/$1"
+    eval "cd ~/work/$1"
 }
 
 function tal {
-    eval "cd ~/workspace/$1"
+    eval "cd ~/work/$1"
 }
 

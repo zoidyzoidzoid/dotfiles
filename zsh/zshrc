@@ -12,8 +12,8 @@ zplug "lib/directories", from:oh-my-zsh
 zplug "lib/key-bindings", from:oh-my-zsh
 zplug "lib/termsupport", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/globalias", from:oh-my-zsh
+# zplug "plugins/git", from:oh-my-zsh
+# zplug "plugins/globalias", from:oh-my-zsh
 zplug "plugins/gnu-utils", from:oh-my-zsh
 zplug "plugins/history", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
@@ -52,10 +52,15 @@ export TERM="xterm-256color"
 
 fpath=(~/.zsh/completion /usr/local/share/zsh-completions $fpath)
 
-# source "${HOME}/src/superbalist/google-cloud-sdk/path.zsh.inc"
-# source "${HOME}/src/superbalist/google-cloud-sdk/completion.zsh.inc"
 export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/sbin:${HOME}/.composer/vendor/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 export PATH="~/.gem/ruby/2.4.0/bin:/usr/local/opt/ccache/libexec:/usr/local/opt/php71/bin:$PATH:${HOME}/.conduit/bin:${HOME}/src/istio/bin"
+
+if [ -f '${HOME}/src/apps/google-cloud-sdk/path.zsh.inc' ]; then
+    source '${HOME}/src/apps/google-cloud-sdk/path.zsh.inc';
+fi
+if [ -f '${HOME}/src/apps/google-cloud-sdk/completion.zsh.inc' ]; then
+    source '${HOME}/src/apps/google-cloud-sdk/completion.zsh.inc';
+fi
 source <(kubectl completion zsh)
 #alias vim=nvim
 #
@@ -63,7 +68,7 @@ function view_ssl_cert() {
     echo | openssl s_client -showcerts -servername "$1" -connect "$1":443 2>/dev/null | openssl x509 -inform pem -noout -text
 }
 
-export PATH="$PATH:/Users/william/src/apps/istio-0.1.6/bin"
+export PATH="$PATH:${HOME}/src/apps/istio-0.1.6/bin"
 
 if ! zplug check; then
     printf "Found zplug updates. Install? [y/N]: "
