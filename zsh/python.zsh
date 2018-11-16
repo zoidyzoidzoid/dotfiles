@@ -10,10 +10,12 @@ alias vv-3.5='python3.5 -m virtualenv virtualenv'
 
 alias pip='noglob pip'
 
-if which pyenv > /dev/null; then
-  eval "$(pyenv init -)"
-fi
+export PATH="${HOME}/.pyenv/shims:${PATH}"
+export PYENV_SHELL=zsh
 
-if which pyenv-virtualenv-init > /dev/null; then
-  eval "$(pyenv virtualenv-init -)"
-fi
+eval "$(command pyenv init -)"
+
+pyenv() {
+  eval "$(command pyenv-virtualenv-init -)"
+  command pyenv "$@"
+}

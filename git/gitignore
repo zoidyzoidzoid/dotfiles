@@ -35,3 +35,7 @@ scripts/run_local_server.sh
 /.python-version
 /venv/
 .vscode/
+/.pytest_cache/
+/.pyre/
+/.mypy_cache/
+__pycache__/

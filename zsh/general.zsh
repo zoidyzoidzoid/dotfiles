@@ -18,7 +18,9 @@ export EDITOR='nvim'
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 function new_jekyll_post() {
-    touch "_posts/$(date "+%Y-%m-%d")-$1.markdown"
+    fn="_posts/$(date "+%Y-%m-%d")-$1.markdown"
+    echo "Creating ${fn}"
+    touch "${fn}"
 }
 
 function org {

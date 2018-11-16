@@ -2,9 +2,10 @@
     ~/.gitconfig: git/gitconfig
     ~/.gitignore: git/gitignore
     ~/.git_commit_msg.txt: git/git_commit_msg.txt
-    ~/.vimrc.after: vim/vimrc.after
-    ~/.janus: vim/janus-plugins
     ~/.zshrc: zsh/zshrc
     ~/.zsh: zsh
-    ~/.config/nvim: ~/.vim
+    ~/.config/nvim/.vim: ~/.vim
     ~/.config/nvim/init.vim: ~/.vimrc
+    ~/.git_status.sh: git_status.sh
+    ~/.tmux.conf: tmux.conf
+    ~/.config/kitty/kitty.conf: kitty.conf
