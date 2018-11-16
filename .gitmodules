@@ -1,7 +1,3 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "vim/janus-plugins"]
-	path = vim/janus-plugins
-	url = https://github.com/zoidbergwill/.janus.git
-	branch = master

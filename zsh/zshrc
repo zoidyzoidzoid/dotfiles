@@ -1,3 +1,7 @@
+# Profiling stuff
+# PS4=$'\\\011%D{%s%6.}\011%x\011%I\011%N\011%e\011'
+# exec 3>&2 2>/tmp/zshstart.$$.log
+# setopt xtrace prompt_subst
 # set -x
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -85,10 +89,21 @@ if zplug check b4b4r07/enhancd; then
   export ENHANCD_FILTER=fzy
 fi
 
+enable_proxy () {
+    export http_proxy="http://webproxy.corp.booking.com:3128"
+    export https_proxy="http://webproxy.corp.booking.com:3128"
+    export no_proxy=".booking.com"
+}
+
+disable_proxy () {
+    unset http_proxy https_proxy no_proxy
+}
+
+enable_proxy
 
 alias fzfe='fzf --bind "enter:execute(vim {})'
 alias fzfl='fzf --bind "enter:execute(less {})'
-alias rvscode="/Users/wstewart/work/nuclide/modules/big-dig-vscode/scripts/mac-insiders-dev"
+alias rvscode="${HOME}/work/nuclide/modules/big-dig-vscode/scripts/mac-insiders-dev"
 
 # add Pulumi to the PATH
 export PATH="$PATH:$HOME/.pulumi/bin:$HOME/src/apps/arcanist/bin/"
@@ -97,4 +112,15 @@ export PATH="$PATH:$HOME/.pulumi/bin:$HOME/src/apps/arcanist/bin/"
 if [ -f '${HOME}/src/apps/google-cloud-sdk/path.zsh.inc' ]; then source '${HOME}/src/apps/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/zoid/src/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/zoid/src/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '${HOME}/src/apps/google-cloud-sdk/completion.zsh.inc' ]; then source '${HOME}/src/apps/google-cloud-sdk/completion.zsh.inc'; fi
+
+# opam configuration
+test -r ${HOME}/.opam/opam-init/init.zsh && . ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+alias ssh="TERM=xterm-256color ssh"
+alias d="kitty +kitten diff"
+#
+# Profilign stuff
+# set +x
+# unsetopt xtrace
+# exec 2>&3 3>&-
+#
