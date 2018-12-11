@@ -26,6 +26,8 @@
 [difftool "kitty.gui"]
     cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 [fetch]
+	prune = true
+	pruneTags = true
 	recurseSubmodules = on-demand
 [push]
 	default = simple
@@ -199,7 +201,7 @@
 [url "git@gitlab.booking.com:"]
 	insteadOf = https://gitlab.booking.com/
 [hub]
-	protocol = ssh
+	protocol = https
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
@@ -210,6 +212,3 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
-[oh-my-zsh]
-	hide-dirty = 1
-

@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
 alias vv='python2.7 -m virtualenv virtualenv'
-alias venv='source virtualenv/bin/activate'
-alias v='source virtualenv/bin/activate'
+alias venv='source virtualenv/bin/activate || source venv/bin/activate'
+alias v='source virtualenv/bin/activate || source venv/bin/activate'
 alias dv='deactivate'
 alias ipy='ipython'
 alias vv-2.7='python2.7 -m virtualenv virtualenv'
