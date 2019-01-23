@@ -115,15 +115,16 @@ if [ -f '${HOME}/src/apps/google-cloud-sdk/path.zsh.inc' ]; then source '${HOME}
 if [ -f '${HOME}/src/apps/google-cloud-sdk/completion.zsh.inc' ]; then source '${HOME}/src/apps/google-cloud-sdk/completion.zsh.inc'; fi
 
 # opam configuration
-test -r ${HOME}/.opam/opam-init/init.zsh && . ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# test -r ${HOME}/.opam/opam-init/init.zsh && . ${HOME}/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 alias ssh="TERM=xterm-256color ssh"
 alias d="kitty +kitten diff"
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
+export GREP_OPTIONS="--color=auto"
 
 #
-# Profilign stuff
+# Profiling stuff
 # set +x
 # unsetopt xtrace
 # exec 2>&3 3>&-
@@ -131,4 +132,5 @@ eval "$(rbenv init -)"
 # export PATH="/usr/local/opt/llvm/bin:$PATH"
 # export LDFLAGS="-L/usr/local/opt/llvm/lib"
 # export CPPFLAGS="-I/usr/local/opt/llvm/include"
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# export KEYFILE="${HOME}/.config/void.keys"

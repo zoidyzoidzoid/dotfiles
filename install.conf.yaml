@@ -9,3 +9,4 @@
     ~/.git_status.sh: git_status.sh
     ~/.tmux.conf: tmux.conf
     ~/.config/kitty/kitty.conf: kitty.conf
+    ~/.config/void.keys: void.keys
