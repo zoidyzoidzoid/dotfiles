@@ -10,6 +10,7 @@ set -o pipefail
 
 if ! which pyenv-migrate &> /dev/null; then
   echo 'pyenv-migrate is required for this script.'
+  echo '  e.g. You can try "brew install pyenv-pip-migrate"'
   exit 1
 fi
 
@@ -22,7 +23,7 @@ installed_versions="$(pyenv versions --bare)"
 
 global_versions=""
 
-for version in "2.7" "3.5" "3.6"; do
+for version in "2.7" "3.7"; do
   echo "Checking ${version}"
   version="${version/./\\.}"
   versions="$(echo "$installable_versions" | egrep "^\W*${version}")"
