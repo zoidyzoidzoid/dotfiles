@@ -1,5 +1,6 @@
 - link:
     ~/.gitconfig: git/gitconfig
+    ~/.gitconfig-work: git/gitconfig-work
     ~/.gitignore: git/gitignore
     ~/.git_commit_msg.txt: git/git_commit_msg.txt
     ~/.zshrc: zsh/zshrc
