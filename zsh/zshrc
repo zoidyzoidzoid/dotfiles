@@ -134,3 +134,5 @@ export GREP_OPTIONS="--color=auto"
 # export CPPFLAGS="-I/usr/local/opt/llvm/include"
 # [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 # export KEYFILE="${HOME}/.config/void.keys"
+#
+alias icat="kitty +kitten icat"

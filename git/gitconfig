@@ -211,9 +211,9 @@
 	process = git-lfs filter-process
 [interactive]
 	diffFilter = "diff-highlight | less -FRX --tabs=4"
+[includeIf "gitdir:~/work/"]
+	path = ~/.gitconfig-work
 
-[includeIf "gitdir:~/work"]
-    path = .gitconfig-work
+[includeIf "gitdir:~/src/"]
+	path = ~/.gitconfig-personal
 
-[includeIf "gitdir:~/src"]
-    path = .gitconfig-personal
