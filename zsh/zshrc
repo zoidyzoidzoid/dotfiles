@@ -36,6 +36,11 @@ HISTSIZE=1000000
 HISTFILE=~/.zsh_history
 SAVEHIST=1000000
 setopt inc_append_history share_history
+setopt extended_history       # record timestamp of command in HISTFILE
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_find_no_dups
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
 
 . ~/.zsh/docker.zsh
 . ~/.zsh/erlang.zsh
@@ -136,3 +141,8 @@ export GREP_OPTIONS="--color=auto"
 # export KEYFILE="${HOME}/.config/void.keys"
 #
 alias icat="kitty +kitten icat"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/mozjpeg/bin:$PATH"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

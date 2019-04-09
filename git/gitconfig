@@ -7,20 +7,21 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
+	autocrlf = input
 [credential]
 	helper = osxkeychain
 [format]
 	signOff = true
 [diff]
-    tool = kitty
-    guitool = kitty.gui
+	tool = kitty
+	guitool = kitty.gui
 [difftool]
-    prompt = false
-    trustExitCode = true
+	prompt = false
+	trustExitCode = true
 [difftool "kitty"]
-    cmd = kitty +kitten diff $LOCAL $REMOTE
+	cmd = kitty +kitten diff $LOCAL $REMOTE
 [difftool "kitty.gui"]
-    cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+	cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 [fetch]
 	prune = true
 	pruneTags = true

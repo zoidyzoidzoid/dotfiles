@@ -26,3 +26,10 @@ function new_jekyll_post() {
 function org {
   eval "cd ~/src/org/$1"
 }
+
+function dedupHistory() {
+    cp ~/.zsh_history{,-old}
+    tmpFile=`mktemp`
+    awk -F ";" '!seen[$2]++' ~/.zsh_history > $tmpFile
+    mv $tmpFile ~/.zsh_history
+}
