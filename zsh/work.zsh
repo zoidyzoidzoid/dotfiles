@@ -6,5 +6,9 @@ function wk {
 }
 
 function puppet-pull-branch {
-  ssh puppet-staging "cd /etc/puppet/environments/wstewart && git fetch origin && git checkout $(git branch | grep "*" | awk '{print $2}') && git pull"
+  ssh ps "cd /etc/puppet/environments/wstewart && git fetch origin && git checkout $(git branch | grep "*" | awk '{print $2}') && git pull"
+}
+
+function puppet6-pull-branch {
+  ssh ps6 "cd /etc/puppetlabs/code/environments/wstewart && git fetch origin && git checkout $(git branch | grep "*" | awk '{print $2}') && git pull"
 }

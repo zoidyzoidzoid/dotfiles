@@ -196,8 +196,6 @@
 	home = "rev-parse --show-toplevel"
 [url "git@github.com:"]
 	insteadOf = gh:
-[url "git@gitlab.booking.com:"]
-	insteadOf = https://gitlab.booking.com/
 [hub]
 	protocol = https
 [color "diff-highlight"]

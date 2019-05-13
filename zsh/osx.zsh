@@ -4,5 +4,8 @@ if [[ "$(uname -s)" == 'Darwin' ]]; then
   brew_update() {
     brew update && brew upgrade && brew cleanup -s
   }
+  cd() {
+    builtin cd $@ && exa
+  }
 fi
 

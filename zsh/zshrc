@@ -57,6 +57,10 @@ setopt hist_save_no_dups
 . ~/.zsh/work.zsh
 . ~/.zsh/perl.zsh
 
+if [[ -d ~/src/private-dotfiles ]]; then
+  . ~/src/private-dotfiles/zshrc-extras
+fi
+
 zstyle ':completion:*' menu select=2
 
 # export TERM="xterm-256color"
@@ -93,18 +97,6 @@ unalias h
 if zplug check b4b4r07/enhancd; then
   export ENHANCD_FILTER=fzy
 fi
-
-enable_proxy () {
-    export http_proxy="http://webproxy.corp.booking.com:3128"
-    export https_proxy="http://webproxy.corp.booking.com:3128"
-    export no_proxy=".booking.com"
-}
-
-disable_proxy () {
-    unset http_proxy https_proxy no_proxy
-}
-
-enable_proxy
 
 alias fzfe='fzf --bind "enter:execute(vim {})'
 alias fzfl='fzf --bind "enter:execute(less {})'
@@ -145,4 +137,4 @@ alias icat="kitty +kitten icat"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/mozjpeg/bin:$PATH"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH:/usr/local/opt/grep/libexec/gnubin"

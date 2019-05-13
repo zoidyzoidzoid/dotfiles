@@ -1,6 +1,5 @@
 tap "alecthomas/tap"
 tap "azure/draft"
-tap "bplatform/bplatform", "https://gitlab+deploy-token-4:mhCJSXW56F1WjxA6yPN7@gitlab.booking.com/bplatform/homebrew-bplatform.git"
 tap "dart-lang/dart"
 tap "eddieantonio/eddieantonio"
 tap "ethereum/ethereum"
