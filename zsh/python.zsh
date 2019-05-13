@@ -1,5 +1,4 @@
 #!/usr/bin/env zsh
-
 alias vv='python2.7 -m virtualenv virtualenv'
 alias venv='source virtualenv/bin/activate || source venv/bin/activate'
 alias v='source virtualenv/bin/activate || source venv/bin/activate'

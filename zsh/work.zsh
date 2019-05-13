@@ -2,7 +2,7 @@
 setopt interactivecomments
 
 function wk {
-    eval "cd ~/work/$1"
+  eval "cd ~/work/$1"
 }
 
 function puppet-pull-branch {

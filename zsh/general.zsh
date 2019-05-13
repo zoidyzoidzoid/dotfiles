@@ -18,9 +18,9 @@ export EDITOR='nvim'
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 function new_jekyll_post() {
-    fn="_posts/$(date "+%Y-%m-%d")-$1.markdown"
-    echo "Creating ${fn}"
-    touch "${fn}"
+  fn="_posts/$(date "+%Y-%m-%d")-$1.markdown"
+  echo "Creating ${fn}"
+  touch "${fn}"
 }
 
 function org {
@@ -28,8 +28,8 @@ function org {
 }
 
 function dedupHistory() {
-    cp ~/.zsh_history{,-old}
-    tmpFile=`mktemp`
-    awk -F ";" '!seen[$2]++' ~/.zsh_history > $tmpFile
-    mv $tmpFile ~/.zsh_history
+  cp ~/.zsh_history{,-old}
+  tmpFile=`mktemp`
+  awk -F ";" '!seen[$2]++' ~/.zsh_history > $tmpFile
+  mv $tmpFile ~/.zsh_history
 }

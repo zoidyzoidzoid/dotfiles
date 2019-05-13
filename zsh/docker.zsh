@@ -8,12 +8,12 @@ function docker-tidy () {
 
 function img () {
   docker run --rm -it \
-      --name img \
-      --volume "$(pwd)":/home/user/src:ro \
-      --workdir /home/user/src \
-      --volume "${HOME}/.docker:/root/.docker:ro" \
-      --privileged \
-      r.j3ss.co/img
+    --name img \
+    --volume "$(pwd)":/home/user/src:ro \
+    --workdir /home/user/src \
+    --volume "${HOME}/.docker:/root/.docker:ro" \
+    --privileged \
+    r.j3ss.co/img
 }
 
 function docker-tags () {
@@ -35,9 +35,8 @@ HELP
   image="$1"
   tags=`wget -q https://registry.hub.docker.com/v1/repositories/${image}/tags -O -  | sed -e 's/[][]//g' -e 's/"//g' -e 's/ //g' | tr '}' '\n'  | awk -F: '{print $3}'`
 
-  if [ -n "$2" ]
-  then
-      tags=` echo "${tags}" | grep "$2" `
+  if [ -n "$2" ]; then
+    tags=` echo "${tags}" | grep "$2" `
   fi
 
   echo "${tags}"

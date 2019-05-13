@@ -7,9 +7,9 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "zoidbergwill/oh-my-zsh", \
-    use:'themes/zoidbergwill.zsh-theme', \
-    rename-to:'zoidbergwill.zsh-theme', \
-    as:theme
+  use:'themes/zoidbergwill.zsh-theme', \
+  rename-to:'zoidbergwill.zsh-theme', \
+  as:theme
 #zplug "b4b4r07/enhancd", at:v1, use:"*.sh"
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "lib/directories", from:oh-my-zsh
