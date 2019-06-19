@@ -38,9 +38,12 @@ SAVEHIST=1000000
 setopt inc_append_history share_history
 setopt extended_history       # record timestamp of command in HISTFILE
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_find_no_dups
+setopt hist_ignore_dups
 setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt hist_find_no_dups
 setopt hist_save_no_dups
+setopt hist_beep
 
 . ~/.zsh/docker.zsh
 . ~/.zsh/erlang.zsh
