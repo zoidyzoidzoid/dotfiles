@@ -17,20 +17,12 @@ virtualenv-3.*/
 
 scripts/run_local_server.sh
 
-*-e
-
 /.ipynb_checkpoints/
 *.ipynb
 
 .cache/
 
 /node_modules/
-
-# Wercker stuff
-/_builds/
-/_cache/
-/_projects/
-/_steps/
 
 /.python-version
 /venv/
