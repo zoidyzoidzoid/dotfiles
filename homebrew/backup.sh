@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-brew bundle dump --force
+brew bundle dump --force --describe
