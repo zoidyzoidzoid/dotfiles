@@ -1,7 +1,5 @@
 [user]
-	name = William Stewart
-	useConfigOnly = true
-	# email = william.stewart@booking.com
+    useConfigOnly = true
 [commit]
 	template = ~/.git_commit_msg.txt
 [core]
