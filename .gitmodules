@@ -3,4 +3,4 @@
 	url = https://github.com/anishathalye/dotbot
 [submodule "private-dotfiles"]
 	path = private-dotfiles
-	url = https://github.com/zoidbergwill/private-dotfiles
+	url = https://github.com/zoidyzoidzoid/private-dotfiles
